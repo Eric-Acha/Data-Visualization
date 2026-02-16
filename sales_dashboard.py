@@ -8,30 +8,30 @@ df = pd.read_excel('Data/sales_performance_raw_data.xlsx')
 df["order_date"] = pd.to_datetime(df["order_date"])     
 
 # #Revenue by Region
-# revenue_by_region = df.groupby("region")["revenue"].sum().sort_values(ascending=False)  
-# plt.figure()
-# revenue_by_region.plot(kind="bar") 
-# plt.title("Revenue by Region")
-# plt.xlabel("Region")
-# plt.ylabel("Total Revenue")
-# plt.xticks(rotation=0)
-# plt.tight_layout()
-# plt.show() 
+revenue_by_region = df.groupby("region")["revenue"].sum().sort_values(ascending=False)  
+plt.figure()
+revenue_by_region.plot(kind="bar") 
+plt.title("Revenue by Region")
+plt.xlabel("Region")
+plt.ylabel("Total Revenue")
+plt.xticks(rotation=0)
+plt.tight_layout()
+plt.show() 
 
-# monthly_revenue = (
-#     df
-#     .set_index("order_date")
-#     .resample("M")["revenue"]
-#     .sum()
-# )
+monthly_revenue = (
+    df
+    .set_index("order_date")
+    .resample("M")["revenue"]
+    .sum()
+)
 
-# plt.figure()
-# monthly_revenue.plot()
-# plt.title("Monthly Revenue Trend")
-# plt.xlabel("Month")
-# plt.ylabel("Total Revenue")
-# plt.tight_layout()
-# plt.show() 
+plt.figure()
+monthly_revenue.plot()
+plt.title("Monthly Revenue Trend")
+plt.xlabel("Month")
+plt.ylabel("Total Revenue")
+plt.tight_layout()
+plt.show() 
 
 #Top 10 Products by Revenue
 
