@@ -144,7 +144,7 @@ python sales_visualization.py
 **Eric Acha**
 Database & Data Analytics Professional
 
-Project Demos
+##Project Demos
 Homepage Demo: ![Dashboard] (gifs/dashboard_imgee.gif)
 
 Contact Page Demo: ![Dashboard Code] (gifs/dashboard_code.gif)
