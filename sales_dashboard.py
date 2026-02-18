@@ -35,21 +35,21 @@ plt.show()
 
 #Top 10 Products by Revenue
 
-# top_products = (
-#     df.groupby("product_name")["revenue"]
-#     .sum()
-#     .sort_values(ascending=False)
-#     .head(10)
-# )
+top_products = (
+    df.groupby("product_name")["revenue"]
+    .sum()
+    .sort_values(ascending=False)
+    .head(10)
+)
 
-# plt.figure()
-# top_products.plot(kind="bar")
-# plt.title("Top 10 Products by Revenue")
-# plt.xlabel("Product")
-# plt.ylabel("Total Revenue")
-# plt.xticks(rotation=45, ha="right")
-# plt.tight_layout()
-# plt.show()
+plt.figure()
+top_products.plot(kind="bar")
+plt.title("Top 10 Products by Revenue")
+plt.xlabel("Product")
+plt.ylabel("Total Revenue")
+plt.xticks(rotation=45, ha="right")
+plt.tight_layout()
+plt.show()
 
 #Revenue by Category
 
